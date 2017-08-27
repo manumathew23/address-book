@@ -1,0 +1,22 @@
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "../stylesheet/stylesheet.css" />
+	<script>
+		var btns = "";
+		var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		var letterArray = letters.split("");
+		for (var i = 0; i < 26; i++){
+    		var letter = letterArray.shift();
+    		btns += '<button class = "mybtns" onclick = "alphabetSearch(\''+letter+'\');">'+letter+'</button>';
+		}
+		function alphabetSearch(let){
+    		window.location = "homepage.php?action=view&letter="+let;
+		}
+	</script>
+</head>
+<body>
+	<script> 
+		document.write(btns); 
+	</script>
+</body>
+</html>
